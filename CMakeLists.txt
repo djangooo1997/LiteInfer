@@ -5,7 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Set the CUDA compiler path or name
 set(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")
 
-project(llama_infer CXX CUDA)
+project(LiteInfer CXX CUDA)
 include(cmake/cuda.cmake)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

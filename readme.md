@@ -1,28 +1,5 @@
-# KuiperLLama 动手自制大模型推理框架，支持LLama2/3和Qwen2.5
-> News：新课发布，《动手自制大模型推理框架》，全手写cuda算子，课程框架支持LLama2和3.x以及Qwen2.5模型
-
-Hi，各位朋友们好！我是 KuiperInfer 的作者。KuiperInfer 作为一门开源课程，迄今已经在 GitHub 上已斩获 2.5k star。
-如今在原课程的基础上，**我们全新推出了《动手自制大模型推理框架》， 新课程支持Llama系列大模型（包括最新的LLama3.2）以及Qwen2.5系列大模型，同时支持 Cuda 加速和 Int8 量化**，自推出以来便广受好评。
-
-## 《动手自制大模型推理框架》课程目录：
-https://tvle9mq8jh.feishu.cn/docx/AGb0dpqwfohQ9oxx4QycqbCjnJh
-## 《动手自制大模型推理框架》课程优势
-
-1. 采用最新的C++ 20标准去写代码，统一、美观的代码风格，良好的错误处理；
-2. 优秀的项目管理形式，我们采用CMake+Git的方式管理项目，接轨大厂；
-3. 授人以渔，教大家怎么设计一个现代C++项目，同时教大家怎么用单元测试和Benchmark去测试验证自己的项目； 
-4. CPU算子和CUDA双后端实现，对时新的大模型（LLama3和Qwen系列）有非常好的支持。
-
-
-**如果你对大模型推理感兴趣，想要深入了解并掌握相关技术，想在校招、秋招面试当中脱颖而出，那么这门《动手自制大模型推理框架》课程绝对不容错过。快来加入我们，一起开启学习之旅吧！
-    感兴趣的同学欢迎扫一扫课程下方二维码或者添加微信 lyrry1997 参加课程**
-
-<img src="imgs/me.jpg"  />
-
-
-
-## 《动手自制大模型推理框架》课程项目运行效果
-> LLama1.1b fp32模型，视频无加速，运行平台为Nvidia 3060 laptop，速度为60.34 token/s
+# LiteInfer 轻量级大模型推理框架（Llama2/3 与 Qwen2.5）
+LiteInfer 是一个面向个人与学习用途的轻量级大模型推理框架，支持 Llama 系列与 Qwen2.5，提供 CPU/CUDA 双后端与 Int8 量化示例。
 
 ![](./imgs/do.gif)
 
@@ -70,7 +47,7 @@ python export.py llama2_7b.bin --meta-llama path/to/llama/model/7B
 
 ## 生成文本的方法
 ```shell
-./llama_infer llama2_7b.bin tokenizer.model
+./lite_infer llama2_7b.bin tokenizer.model
 
 ```
 
@@ -96,7 +73,7 @@ make -j16
 ```
 - 运行：
 ```shell
-./build/demo/llama_infer Llama-3.2-1B.bin meta-llama/Llama-3.2-1B/tokenizer.json
+./build/demo/lite_infer Llama-3.2-1B.bin meta-llama/Llama-3.2-1B/tokenizer.json
 # 和 huggingface 推理的结果进行对比
 python3 hf_infer/llama3_infer.py
 ```

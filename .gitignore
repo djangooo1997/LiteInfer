@@ -1,0 +1,50 @@
+# Build artifacts
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake-build*/
+*.o
+*.obj
+*.d
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.out
+*.exe
+compile_commands.json
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.cache/
+
+# Python caches
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Models and large data
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+meta-llama/
+Qwen/
+/tmp/
+
+# Local libs
+/lib/
+
+# Reports/Logs
+*.log
+*.nsys-rep
+
+# OS files
+.DS_Store
+Thumbs.db
